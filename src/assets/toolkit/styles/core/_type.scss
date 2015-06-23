@@ -1,0 +1,118 @@
+// Import Google Font
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600,300,400,700&subset=latin,cyrillic,latin-ext);
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	@include rem(font-size, 16px);
+	@include rem(line-height, 24px);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+}
+
+
+//++ rhythm(margin-top, margin-bottom)
+// how many multiples of the $baseline to use.
+// ex: 
+// $baseline: 6; 
+// h1 { rhythm(2, 4) }
+//
+// EXPORTS TO:
+// h1 { 
+// 	margin-top: 12px; 
+// 	margin-bottom: 24px; 
+// }
+
+h1, .h1 {
+  @include rem(font-size, $size-5);
+  @include rem(line-height, 72px);
+  @include rhythm-margin(0, 4);
+}
+
+h2, .h2 {
+	@include rem(font-size, $size-4);
+	@include rem(line-height, 60px);
+	@include rhythm-margin(0, 4);
+}
+
+h3, .h3 {
+	@include rem(font-size, $size-3);
+	@include rem(line-height, 48px);
+	@include rhythm-margin(0, 4);
+}
+
+h4, .h4 {
+	@include rem(font-size, $size-2);
+	@include rem(line-height, 36px);
+	@include rhythm-margin(0, 2);
+}
+
+h5, .h5 {
+	@include rem(font-size, $size-1);
+	@include rem(line-height, 30px);
+	@include rhythm-margin(0, 2);
+}
+
+h6, .h6 {
+	@include rem(font-size, $size-0);
+	@include rem(line-height, 24px);
+	@include rhythm-margin(0, 0);
+}
+
+.h1, .h2 {
+	&--hero {
+		font-family: $header-hero-family;
+		font-weight: $header-hero-weight;
+	}
+}
+
+p, ul, ol,dl {
+	@include rem(font-size, 16px);
+	@include rem(line-height, 24px);
+	@include rhythm-margin(0, 2);
+}
+
+ul, ol {
+	ul, ol {
+		margin-bottom: 0;
+	}
+}
+
+small, .small { 
+	@include rem(font-size, 12px);
+	@include rem(line-height, 18px)
+}
+
+b, i, strong, em, code, kbd {
+	@include rem(line-height, 24px);
+}
+
+blockquote { 
+	@include rem(font-size, 25px);
+	@include rem(line-height, 36px);
+	@include rhythm-margin(2, 2);
+	font-weight: 300;
+}
+
+// Description Lists
+dl {
+	@include rhythm-margin(0, 4);
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 0; // Undo browser default
+}
+
+

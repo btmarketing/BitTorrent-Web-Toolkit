@@ -1,0 +1,58 @@
+.navbar {
+	position: fixed;
+	background: $gray--9;
+	width: 100%;
+	top: 0;
+}
+
+.nav {
+	float: right;
+	position: relative;
+	right: -157px;
+	transition: right .3s ease-in-out;
+	li {
+		list-style: none;
+	}
+}
+
+.nav__logo {
+	float: left;
+	display: inline-block;
+	padding: 18px 0;
+}
+.nav__item {
+	float: left;
+	padding: 24px 12px;
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.nav__link {
+	@include rem(font-size, $size-xs);
+	display: block;
+	color: #fff;
+	text-transform: uppercase;
+	&:hover {
+		color: $primary-color;
+		text-decoration: none;
+		transition: color .4s ease;
+	}
+}
+
+.btn--nav {
+	@extend .btn;
+	@extend .btn--primary;
+	@include rem(font-size, $size-xs);
+}
+
+.nav__btn {
+	float: right;
+	padding-left: 12px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	opacity: 0;
+	transition: opacity .4s ease-in-out;
+}
+
+

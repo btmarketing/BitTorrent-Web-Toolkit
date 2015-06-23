@@ -1,0 +1,237 @@
+// Forms
+// --------------------------------------------------
+
+
+.form {
+	margin-bottom: $base-line-height*2;
+}
+// default form (stacked)
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"],
+.form input[type="url"],
+.form input[type="date"],
+.form input[type="month"],
+.form input[type="time"],
+.form input[type="datetime"],
+.form input[type="datetime-local"],
+.form input[type="week"],
+.form input[type="number"],
+.form input[type="search"],
+.form input[type="tel"],
+.form input[type="color"],
+.form select,
+.form textarea {
+ 	@include rhythm-borders(2px, 2, solid);
+    display: block;
+    border: 2px solid $gray--2;
+    border-radius: 2px;
+    vertical-align: middle;
+    font-weight: 400;
+    color: $gray--9;
+    transition: border-color 0.3s ease-in-out;
+    width: 100%;
+}
+
+//default form (stacked) IE8 fix
+.form input:not([type]) {
+    @include rhythm-padding(1, 1);
+ 	@include rhythm-borders(2px, 1, solid);
+    display: block;
+    border: 2px solid $gray--2;
+    border-radius: 2px;
+    vertical-align: middle;
+    font-weight: 400;
+    color: $gray--3;
+    transition: border-color 0.3s ease-in-out;
+    width: 100%;
+}
+
+// form style while focused
+.form input[type="text"]:focus,
+.form input[type="password"]:focus,
+.form input[type="email"]:focus,
+.form input[type="url"]:focus,
+.form input[type="date"]:focus,
+.form input[type="month"]:focus,
+.form input[type="time"]:focus,
+.form input[type="datetime"]:focus,
+.form input[type="datetime-local"]:focus,
+.form input[type="week"]:focus,
+.form input[type="number"]:focus,
+.form input[type="search"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="color"]:focus,
+.form select:focus,
+.form textarea:focus {
+    outline: 0;
+    border-color: $blue--2;
+}
+
+//form style while focused IE8 fix
+.form input:not([type]):focus {
+    outline: 0;
+    border-color: $blue--2;
+}
+
+// disabled inputs
+.form input[type="text"][disabled],
+.form input[type="password"][disabled],
+.form input[type="email"][disabled],
+.form input[type="url"][disabled],
+.form input[type="date"][disabled],
+.form input[type="month"][disabled],
+.form input[type="time"][disabled],
+.form input[type="datetime"][disabled],
+.form input[type="datetime-local"][disabled],
+.form input[type="week"][disabled],
+.form input[type="number"][disabled],
+.form input[type="search"][disabled],
+.form input[type="tel"][disabled],
+.form input[type="color"][disabled],
+.form select[disabled],
+.form textarea[disabled] {
+    cursor: not-allowed;
+    background-color: $gray--2;
+    color: $gray;
+}
+
+//disabled inputs IE8 Fix
+.form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: $gray--2;
+    color: $gray;
+}
+
+// Read Only Style
+.form input[readonly],
+.form select[readonly],
+.form textarea[readonly] {
+    background-color: $gray--2;
+    color: $gray;
+    border-color: $gray--3;
+}
+
+// Invalid Style
+.form input:focus:invalid,
+.form textarea:focus:invalid,
+.form select:focus:invalid {
+    border-color: $red--2;
+}
+
+// Select dropdown style
+.form select {
+	height: $baseline * 8px;
+	background-color: transparent;
+}
+
+// Multiple select style
+.form select[multiple] {
+    height: auto;
+}
+
+.form label {
+}
+
+.form fieldset {
+    margin-bottom: $base-line-height;
+    padding: 0;
+    border: 0;
+}
+
+.form legend {
+    display: block;
+    width: 100%;
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
+    @include rhythm-margin(0, 2);
+	font-weight: 600;
+}
+
+// Inline form Style
+.form-inline input[type="text"],
+.form-inline input[type="password"],
+.form-inline input[type="email"],
+.form-inline input[type="url"],
+.form-inline input[type="date"],
+.form-inline input[type="month"],
+.form-inline input[type="time"],
+.form-inline input[type="datetime"],
+.form-inline input[type="datetime-local"],
+.form-inline input[type="week"],
+.form-inline input[type="number"],
+.form-inline input[type="search"],
+.form-inline input[type="tel"],
+.form-inline input[type="color"],
+.form-inline input[type="file"],
+.form-inline select,
+.form-inline label,
+.form-inline textarea {
+    display: inline-block;
+    margin: 0;
+    width: auto;
+    margin-right: $base-line-height;
+}
+
+// Inline form Style IE8 fix
+.form-inline input:not([type]) {
+    display: inline-block;
+    margin: 0;
+    width: auto;
+    margin-right: $base-line-height;
+}
+
+// Aligned form style
+
+// make form groups in aligned forms act like rows
+.form-aligned .form-group {
+	margin-left: ($grid-gutter-width / -2);
+	margin-right: ($grid-gutter-width / -2);
+	&:before,
+  	&:after {
+    	content: " "; // 1
+    	display: table; // 2
+  	}
+  	&:after {
+    	clear: both;
+  	}
+}
+
+.form-aligned .checkbox,
+.form-aligned .radio {
+	margin: 0;
+}
+
+.control-label {
+	@include rhythm-padding(1.5, 0);
+	text-align: right;
+}
+
+
+.checkbox {
+	display: block;
+	margin-bottom: $base-line-height;
+}
+
+.radio {
+	display: block;
+	margin-bottom: $base-line-height;
+}
+
+// Helper classes
+
+// help with vertical spacing
+.form-group {
+	margin-bottom: $base-line-height;
+}
+
+// help message for stacked forms
+.form-message {
+    display: block;
+    color: $gray--7;
+    font-size: $size-xs;
+}
+
+.btn + .btn {
+	margin-left: $base-line-height;
+}

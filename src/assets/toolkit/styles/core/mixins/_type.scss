@@ -1,0 +1,21 @@
+// Mixins
+// --------------------------------------------------
+
+// Converts something like 12px to 12. Useful for Sass multiplication bugs
+@function unitless($num) {
+	@return ($num / ($num * 0 + 1));
+}
+
+// create REM w/ px fallback from REM
+@mixin px($property, $value) {
+	#{$property}: $value * $base-font-size;
+	#{$property}: #{$value}rem;
+}
+
+// create REM w/ px fallback from PX
+@mixin rem($property, $size) {
+	$r-size: unitless($size);
+	$r-base-font-size: unitless($base-font-size);
+	#{$property}: $size; // Fallback in px
+	#{$property}: ($r-size / $r-base-font-size) * 1rem;
+}

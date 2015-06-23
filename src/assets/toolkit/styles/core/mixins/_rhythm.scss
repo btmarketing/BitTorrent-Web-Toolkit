@@ -1,0 +1,67 @@
+// Set top and bottom margins to keep with baseline grid
+
+@mixin rhythm($margin-top, $margin-bottom, $padding-top, $padding-bottom) {
+	$r-margin-top: $margin-top * $baseline * 1px;
+	$r-margin-bottom: $margin-bottom * $baseline * 1px;
+	$r-padding-top: $padding-top * $baseline * 1px;
+	$r-padding-bottom: $padding-bottom * $baseline * 1px;
+	@include rem(margin-top, $r-margin-top);
+	@include rem(margin-bottom, $r-margin-bottom);
+	@include rem(padding-top, $r-padding-top);
+	@include rem(padding-bottom, $r-padding-bottom);
+}
+
+@mixin rhythm-padding($top, $bottom) {
+	$r-padding-top: $top * $baseline * 1px;
+	$r-padding-bottom: $bottom * $baseline * 1px;
+	@include rem(padding-top, $r-padding-top);
+	@include rem(padding-bottom, $r-padding-bottom);
+}
+
+@mixin rhythm-margin($top, $bottom) {
+	$r-margin-top: $top * $baseline * 1px;
+	$r-margin-bottom: $bottom * $baseline * 1px;
+	@include rem(margin-top, $r-margin-top);
+	@include rem(margin-bottom, $r-margin-bottom);
+}
+
+@mixin rhythm-border-top($size, $padding, $style) {
+	$r-border-top-width: $size * 1px;
+	$r-padding-top: ($padding * $baseline) - $size;
+	@include rem(border-top-width, $r-border-top-width);
+	@include rem(padding-top, $r-padding-top);
+	border-top-style: $style;
+}
+
+@mixin rhythm-border-bottom($size, $padding, $style) {
+	$r-border-bottom-width: $size;
+	$r-padding-bottom: ($padding * $baseline) - $size;
+	@include rem(border-bottom-width, $r-border-bottom-width);
+	@include rem(padding-bottom, $r-padding-bottom);
+	border-bottom-style: $style;
+}
+
+@mixin rhythm-horizontal-border($size, $padding, $style) {
+	$r-border-width: $size;
+	$r-padding: ($padding * $baseline) - $size;
+	@include rem(border-top-width, $r-border-width);
+	@include rem(border-bottom-width, $r-border-width);
+	@include rem(padding-top, $r-padding);
+	@include rem(padding-bottom, $r-padding);
+}
+
+@mixin rhythm-borders($size, $padding, $style) {
+	$r-border-width: $size;
+	$r-padding: ($padding * $baseline) - $size;
+	@include rem(border-width, $r-border-width);
+	@include rem(padding-top, $r-padding);
+	@include rem(padding-bottom, $r-padding);
+	@include rem(padding-left, $padding * $baseline * 1px);
+	@include rem(padding-right, $padding * $baseline * 1px);
+
+
+
+	border-style: $style;
+
+
+}

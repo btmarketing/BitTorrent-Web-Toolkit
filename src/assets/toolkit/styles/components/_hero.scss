@@ -1,0 +1,23 @@
+.hero {
+
+}
+
+.hero--sync {
+	background-color: $black;
+	color: $gray--1;
+	h5 {
+		font-weight: 300;
+	}
+}
+
+.hero__subcta {
+	text-align: center;
+	padding-top: 6px;
+	@include rem(font-size, $size-xs);
+	a {
+		color: #fff;
+	}
+	a:hover {
+		color: darken(#fff, 10%)
+	}
+}

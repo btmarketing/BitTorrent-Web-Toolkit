@@ -1,0 +1,200 @@
+/**
+ * Fabricator styles
+ * @author Luke Askew
+ * Class selectors are namespaced with "f-"
+ */
+
+@import 'partials/variables';
+@import 'partials/code';
+@import 'partials/color-chips';
+@import 'partials/controls';
+@import 'partials/item';
+@import 'partials/layout';
+@import 'partials/menu';
+
+@import "../../toolkit/styles/core/colors";
+@import "../../toolkit/styles/core/variables";
+
+.color-palette {
+	padding-bottom: 20px;
+}
+
+.colorpattern {
+	height: 55px;
+	line-height: 55px;
+	width: 100%;
+	font-weight: 300;
+	padding: 0 15px;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.colorpattern--primary {
+	@extend .colorpattern;
+	font-weight: bold;
+	height: 90px;
+	text-align:	center;
+	line-height: 24px;
+	padding-top: 20px;
+}
+
+.color-dark {
+	color: #ffffff;
+	opacity: .9;
+}
+
+.red {
+	background-color: $red;
+	&.step1 {background-color: $red--1}
+	&.step2 {background-color: $red--2}
+	&.step3 {background-color: $red--3}
+	&.step4 {background-color: $red--4}
+	&.step5 {background-color: $red--5}
+	&.step6 {background-color: $red--6}
+	&.step7 {background-color: $red--7}
+	&.step8 {background-color: $red--8}
+	&.step9 {background-color: $red--9}
+	&.step10 {background-color: $red--10}
+}
+
+.gray {
+	background-color: $gray;
+	&.step1 {background-color: $gray--1}
+	&.step2 {background-color: $gray--2}
+	&.step3 {background-color: $gray--3}
+	&.step4 {background-color: $gray--4}
+	&.step5 {background-color: $gray--5}
+	&.step6 {background-color: $gray--6}
+	&.step7 {background-color: $gray--7}
+	&.step8 {background-color: $gray--8}
+	&.step9 {background-color: $gray--9}
+	&.step10 {background-color: $gray--10}
+}
+
+.slate {
+	background-color: $slate;
+	&.step1 {background-color: $slate--1}
+	&.step2 {background-color: $slate--2}
+	&.step3 {background-color: $slate--3}
+	&.step4 {background-color: $slate--4}
+	&.step5 {background-color: $slate--5}
+	&.step6 {background-color: $slate--6}
+	&.step7 {background-color: $slate--7}
+	&.step8 {background-color: $slate--8}
+	&.step9 {background-color: $slate--9}
+	&.step10 {background-color: $slate--10}
+}
+
+.pink {
+	background-color: $pink;
+	&.step1 {background-color: $pink--1}
+	&.step2 {background-color: $pink--2}
+	&.step3 {background-color: $pink--3}
+	&.step4 {background-color: $pink--4}
+	&.step5 {background-color: $pink--5}
+	&.step6 {background-color: $pink--6}
+	&.step7 {background-color: $pink--7}
+	&.step8 {background-color: $pink--8}
+	&.step9 {background-color: $pink--9}
+	&.step10 {background-color: $pink--10}
+}
+
+.orange {
+	background-color: $orange;
+	&.step1 {background-color: $orange--1}
+	&.step2 {background-color: $orange--2}
+	&.step3 {background-color: $orange--3}
+	&.step4 {background-color: $orange--4}
+	&.step5 {background-color: $orange--5}
+	&.step6 {background-color: $orange--6}
+	&.step7 {background-color: $orange--7}
+	&.step8 {background-color: $orange--8}
+	&.step9 {background-color: $orange--9}
+	&.step10 {background-color: $orange--10}
+}
+
+.green {
+	background-color: $green;
+	&.step1 {background-color: $green--1}
+	&.step2 {background-color: $green--2}
+	&.step3 {background-color: $green--3}
+	&.step4 {background-color: $green--4}
+	&.step5 {background-color: $green--5}
+	&.step6 {background-color: $green--6}
+	&.step7 {background-color: $green--7}
+	&.step8 {background-color: $green--8}
+	&.step9 {background-color: $green--9}
+	&.step10 {background-color: $green--10}
+}
+
+.teal {
+	background-color: $teal;
+	&.step1 {background-color: $teal--1}
+	&.step2 {background-color: $teal--2}
+	&.step3 {background-color: $teal--3}
+	&.step4 {background-color: $teal--4}
+	&.step5 {background-color: $teal--5}
+	&.step6 {background-color: $teal--6}
+	&.step7 {background-color: $teal--7}
+	&.step8 {background-color: $teal--8}
+	&.step9 {background-color: $teal--9}
+	&.step10 {background-color: $teal--10}
+}
+
+.cyan {
+	background-color: $cyan;
+	&.step1 {background-color: $cyan--1}
+	&.step2 {background-color: $cyan--2}
+	&.step3 {background-color: $cyan--3}
+	&.step4 {background-color: $cyan--4}
+	&.step5 {background-color: $cyan--5}
+	&.step6 {background-color: $cyan--6}
+	&.step7 {background-color: $cyan--7}
+	&.step8 {background-color: $cyan--8}
+	&.step9 {background-color: $cyan--9}
+	&.step10 {background-color: $cyan--10}
+}
+
+.blue {
+	background-color: $blue;
+	&.step1 {background-color: $blue--1}
+	&.step2 {background-color: $blue--2}
+	&.step3 {background-color: $blue--3}
+	&.step4 {background-color: $blue--4}
+	&.step5 {background-color: $blue--5}
+	&.step6 {background-color: $blue--6}
+	&.step7 {background-color: $blue--7}
+	&.step8 {background-color: $blue--8}
+	&.step9 {background-color: $blue--9}
+	&.step10 {background-color: $blue--10}
+}
+
+.navy {
+	background-color: $navy;
+	&.step1 {background-color: $navy--1}
+	&.step2 {background-color: $navy--2}
+	&.step3 {background-color: $navy--3}
+	&.step4 {background-color: $navy--4}
+	&.step5 {background-color: $navy--5}
+	&.step6 {background-color: $navy--6}
+	&.step7 {background-color: $navy--7}
+	&.step8 {background-color: $navy--8}
+	&.step9 {background-color: $navy--9}
+	&.step10 {background-color: $navy--10}
+}
+
+.purple {
+	background-color: $purple;
+	&.step1 {background-color: $purple--1}
+	&.step2 {background-color: $purple--2}
+	&.step3 {background-color: $purple--3}
+	&.step4 {background-color: $purple--4}
+	&.step5 {background-color: $purple--5}
+	&.step6 {background-color: $purple--6}
+	&.step7 {background-color: $purple--7}
+	&.step8 {background-color: $purple--8}
+	&.step9 {background-color: $purple--9}
+	&.step10 {background-color: $purple--10}
+}

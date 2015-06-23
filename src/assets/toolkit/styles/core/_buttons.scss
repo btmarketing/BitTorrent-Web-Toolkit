@@ -1,0 +1,107 @@
+// Buttons
+// --------------------------------------------------
+
+// Default Button
+.btn {
+	display: inline-block;
+	border: none;
+	border-radius: $border-radius-base;
+	font-weight: $btn-font-weight;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	white-space: nowrap;
+	@include rhythm-padding(2, 2);
+	padding-left: $baseline * 4px;
+	padding-right: $baseline * 4px;
+	transition: all 0.3s ease-in-out;
+	&>.btn-subtext {
+		display: block;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 18px)
+	}
+	&:hover,
+	&:focus,
+	&.focus {
+		text-decoration: none;
+	}
+}
+
+//## Modifiers
+
+.btn--primary {
+	@extend .button;
+	background-color: $button-primary-bg;
+	color: $button-primary-color;
+	&:hover, &:active {
+		background-color: darken($button-primary-bg, 5%);
+		color: $button-primary-color;
+	}
+	&:disabled {
+		opacity: .5;
+	}
+}
+
+.btn--secondary {
+	@extend .button;
+	color: $button-primary-bg;
+	background-color: transparent;
+	border-left: solid 2px;
+	border-right: solid 2px;
+	@include rhythm-border-top(2px, 2, solid);
+	@include rhythm-border-bottom(2px, 2, solid);
+	&:hover, &:active {
+		background-color: $gray--1;
+		color: $button-primary-bg;
+	}
+}
+
+.btn--small {
+	@include rem(font-size, $size-xs);
+	@include rem(line-height, 18px);
+	@include rhythm-padding (2, 2);
+	padding-left: $baseline * 3px;
+	padding-right: $baseline * 3px;
+	&.btn-secondary {
+		@include rhythm-horizontal-border(2px, 2, solid);
+	}
+}
+
+.btn--large {
+	@include rem(font-size, $size-2);
+	@include rem(line-height, 36px);
+	@include rhythm-padding (2, 2);
+	padding-left: $baseline * 8px;
+	padding-right: $baseline * 8px;
+	&>.btn-subtext {
+		display: block;
+		@include rem(font-size, $size-xs);
+		@include rem(line-height, 18px);
+
+	}
+	&.btn-secondary {
+		@include rhythm-horizontal-border(2px, 2, solid);
+	}
+}
+
+// if on a dark background
+.btn--ondark {
+	color: #fff;
+	&:hover, &:active {
+		color: darken(#fff, 20%);
+		background-color: transparent;
+	}
+}
+
+// Make button width of parent
+.btn--block {
+	display: block;
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.btn-block + .btn-block {
+	margin-top: $base-line-height;
+}
